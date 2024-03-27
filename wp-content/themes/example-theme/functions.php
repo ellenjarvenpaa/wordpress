@@ -1,4 +1,24 @@
 <?php
+// filters
+function search_filter($query) {
+	if ($query->is_search) {
+		$query->set('category_name', 'products');
+	}
+	return $query;
+}
+add_filter('pre_get_posts','search_filter');
+
+function my_breadcrumb_title_swapper( $title,  $type, $id ) {
+	if ( in_array( 'home', $type ) ) {
+		$title = __( 'Home' );
+	}
+
+	return $title;
+}
+add_filter( 'bcn_breadcrumb_title', 'my_breadcrumb_title_swapper', 3, 10 );
+
+
+//actions
 function theme_setup(): void {
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'post-thumbnails' );
@@ -17,6 +37,8 @@ function theme_setup(): void {
 
 	// Add menu
 	register_nav_menu( 'main-menu', __( 'Main Menu' ) );
+
+	add_theme_support( 'html5', array( 'search-form' ) );
 }
 
 add_action( 'after_setup_theme', 'theme_setup' );
