@@ -1,4 +1,5 @@
 <?php
+global $wp_query;
 get_header();
 ?>
 	<main>
@@ -9,6 +10,5 @@ get_header();
 			?>
 		</section>
 	</main>
-
 <?php
 get_footer();

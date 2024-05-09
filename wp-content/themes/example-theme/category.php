@@ -1,15 +1,18 @@
 <?php
+global $wp_query;
 get_header();
 ?>
+
 
     <section class="hero">
         <div class="hero-text">
 			<?php
-			echo '<h1>' . single_cat_title('', false) . '</h1>';
-            echo '<p>' . category_description() . '</p>';
+			echo '<h1>' . single_cat_title( '', false ) . '</h1>';
+			echo '<p>' . category_description() . '</p>';
 			?>
         </div>
-        <img src="<?php echo get_random_post_image(get_queried_object_id()); ?>" alt="hero">
+
+	    <?php the_custom_header_markup(); ?>
     </section>
     <main>
         <section class="products">

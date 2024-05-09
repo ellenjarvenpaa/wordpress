@@ -1,9 +1,4 @@
 /*
-Theme Name: Example Theme
-Text Domain: esimerkki
-*/
-
-/*
 Theme Name: Esimerkki
 Text Domain: esimerkki
  */
@@ -19,7 +14,7 @@ Text Domain: esimerkki
     font-size: 16px;
     line-height: 1.5;
     color: #333;
-    background-color: #f4f4f4;
+    background-color: #FFB6C1;
 }
 
 body {
@@ -57,13 +52,12 @@ aside .search {
 }
 
 footer {
-    background-color: #333;
     color: #fff;
     padding: 1rem;
     margin: 2rem 0;
     text-align: center;
     width: 100%;
-    background-image: url('images/wave2.svg');
+    background-color: #FFB6C1;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -83,7 +77,7 @@ footer {
     flex-wrap: wrap;
     margin-bottom: 1rem;
     justify-content: space-between;
-    background-image: url('images/wave.svg');
+    background-color: #FFB6C1;
     background-repeat: no-repeat;
 }
 
@@ -128,7 +122,7 @@ footer {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #f4f4f4;
+    color: #0c0c0c;
     text-align: center;
 }
 
@@ -208,6 +202,17 @@ footer {
 .breadcrumbs a {
     color: #8375ef;
     text-decoration: none;
+}
+
+.contact {
+    margin: 5px;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
 }
 
 @media (min-width: 768px) {
